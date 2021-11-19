@@ -249,7 +249,7 @@ public class GUI {
                 FileWriter myObj;
                 try {
                     myObj = new FileWriter(
-                            "src/Textfiles/Admin.txt",
+                            "src/accounts/Admin.txt",
                             true);
                     PrintWriter pr = new PrintWriter(myObj);
                     pr.write(bx.getText() + "\n");

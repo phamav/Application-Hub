@@ -218,7 +218,7 @@ public class SortedGUI {
                 FileWriter myObj;
                 try {
                     myObj = new FileWriter(
-                            "src/Textfiles/AdminRequests.txt",
+                            "src/accounts/AdminRequests.txt",
                             true);
                     PrintWriter pr = new PrintWriter(myObj);
                     pr.write(bx.getText() + "\n");
