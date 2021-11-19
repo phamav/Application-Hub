@@ -67,3 +67,27 @@ Members
 	c. After refreshing the GUI, app will display without a picture, this will be modified by an administrator.
 12. At the main GUI, try clicking on each app to see its respective information. 
 13. To exit the app, simply press close on the window.
+
+# Lists of Files
+A. Functional Java files:
+- admin.java
+- App.java 
+- commentDriver.java
+- filterDriver.java
+- GUI.java
+- login.java
+- SortedGUI.java
+B. JUnit Testers: 
+- AppTest.java
+- filterDriverTest.java
+- GUITest.java
+C. Account storage files:
+- Accounts.txt
+- Admin.txt
+- Moderator.txt
+D. Icon Images File: icons
+E. Application Information - Sheet1 (1).csv
+F. README.md
+
+# PLEASE CONTACT US IMMEDIATELY IF THE PROGRAM CANNOT READ IN THE FILES
+There might be some errors around the file path. Essentially, we have fixed this by putting everything in the src folder. Call the file using src/filepath.
