@@ -88,6 +88,7 @@ C. Account storage files:
 D. Icon Images File: icons
 E. Application Information - Sheet1 (1).csv
 F. README.md
+G. .gitignore
 
 # PLEASE CONTACT US IMMEDIATELY IF THE PROGRAM CANNOT READ IN THE FILES
 There might be some errors around the file path. Essentially, we have fixed this by putting everything in the src folder. Call the file using src/filepath.
