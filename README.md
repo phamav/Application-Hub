@@ -1,5 +1,4 @@
 # CSE201_Group-8
-
 This is our project for CSE 201. 
 
 # Team Credits 
@@ -7,10 +6,9 @@ TAJI Inc.
 Founded 2021 
 Members
   Jenn Pham: Project Manager
-  Allison McWilliams: Technical Manager, Tester and Developer  
-  Isabel Pulte: Designer, Developer, and Documentor
-  Tanmay Bhatkar: Developer and Tester 
-
+  Allison McWilliams: Technical Manager  
+  Isabel Pulte: Developer (50% Documentation)
+  Tanmay Bhatkar: Developer (50% Coding)
 
 # Requirement lists: 
 1. The software shall be accessible through a GUI.

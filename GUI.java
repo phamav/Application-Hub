@@ -5,6 +5,7 @@
 * Date (start): 10/6/2021
 */
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,14 +27,12 @@ public class GUI {
     static int totalApps = 0;
 
     public static void main(String args[]) {
-
         a.getContentPane().setBackground(Color.white);
         JButton inputButton = new JButton("Search");        
 
         JLabel b1;
         b1 = new JLabel("App Store");
         b1.setBounds(125, 20, 90, 20);
-
 
         JLabel tc = new JLabel("<html>� 2021 TAJI Inc.<br><br>"
                 + "<b>Personnel</b><br>Jenn Pham: Project Manager & Designer<br>Allison McWilliams: Technical Manager<br>"
@@ -43,23 +42,10 @@ public class GUI {
 
         a.add(logIn);
         logIn.setBounds(270, 20, 150, 30);
-        
-        JLabel scroll = new JLabel("This is to test scrollinh");
-        scroll.setBounds(2160, 3280, 200, 200);
-        a.add(scroll);
-
+       
         a.add(inputButton);
         inputButton.setBounds(270, 110, 100, 30);
-        Border bored= BorderFactory.createLineBorder(Color.GRAY,1, true);
-      //Create a JPanel        
-        JScrollPane scrollBar=new JScrollPane();
-
-      //Create a JFrame with title ( AddScrollBarToJFrame )      
-      //Add JScrollPane into JFrame
-      a.add(scrollBar);
-
-      //Set close operation for JFrame
-      a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Border bored= BorderFactory.createLineBorder(Color.white,1, true);
         
         JTextField b2 = new JTextField("Type something...");
         b2.setBorder(bored);
@@ -70,32 +56,25 @@ public class GUI {
         a.add(b1);
         JButton b = new JButton("The Forum");
         b.setBounds(100, 45, 100, 50);
-        ;
         a.add(b);
-        a.setSize(600, 600);
-        a.setLayout(null);
-        a.setVisible(true);
 
         List<App> apps = readAppsFromCSV("src/Application Information - Sheet1 (1).csv");
-         //Code for printing out app names.
-         for (App r : apps) {
-             //System.out.println(r.getName());
-             generateApps(r.getName(), apps);
-         }
+        for (App r : apps) {
+        	generateApps(r.getName(), apps);
+        }
 
+         /**
+          * Call Sort GUI.
+          */
         JButton c = new JButton("Sort");
         c.setBounds(100, 150, 100, 50);       
         a.add(c);
         login.clickClear(b2);
-        a.setSize(1920, 1080);
-        a.setLayout(null);
-        a.setVisible(true);
 
         c.addActionListener((ActionListener) new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-              //String args[] = {"Sort",""}; 
               a.setVisible(false);
               a.dispose();
               SortedGUI.main(args);
@@ -104,8 +83,9 @@ public class GUI {
 
         });
 
-        
-
+        /**
+         * Search for apps.
+         */
         inputButton.addActionListener((ActionListener) new ActionListener() {
 
             @Override
@@ -149,13 +129,15 @@ public class GUI {
 
         });
 
-        // needs when clicked and to go to page with apps / app info etc
-        // apps / app info loads from csv file
-
         // Generate Filter Menu Bar
         filterDriver filterDriver = new filterDriver();
         a.setJMenuBar(filterDriver.getJMenuBar());
+        
+        // JFrame Properties
+        a.setTitle("MetaApp");
         a.setVisible(true);
+        a.setLayout(new BorderLayout());
+        a.setExtendedState(JFrame.MAXIMIZED_BOTH);
         a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     } // main end
@@ -169,7 +151,7 @@ public class GUI {
     private static JButton generateApps(String appName, List<App> appsList) {    
         int x = 450;
         int y = 1;
-        int width = 250;
+        int width = 230;
         int height = 150;                      
         JButton app;
         String filePath;
@@ -180,7 +162,7 @@ public class GUI {
       Icon ico = new ImageIcon(filePath);       
       app = new JButton(ico);
       app.setText(appName);
-      app.setBounds(x + ((totalApps%4)*275), y+ ((totalApps/4)%4*175), width, height);
+      app.setBounds(x + ((totalApps%4)*230), y+ ((totalApps/4)%4*175), width, height);
       a.add(app);                
       
       JButton clear = new JButton("Clear Apps");
