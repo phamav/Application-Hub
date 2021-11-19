@@ -130,6 +130,7 @@ public class login extends JFrame implements ItemListener{
                             logIn = true;
                             // GUI gu = new GUI();
                             GUI.logInAfterAdmin("Admin: " + key, "Admin");
+                            SortedGUI.logInAfterAdmin("Admin: " + key, "Admin");
                         } 
                     }
 
@@ -147,6 +148,7 @@ public class login extends JFrame implements ItemListener{
                             logIn = true;
                             // GUI gu = new GUI();
                             GUI.logInAfterAdmin("Moderator: " + key, "Moderator");
+                            SortedGUI.logInAfterAdmin("Moderator: " + key, "Moderator");
                         } 
                     }
 
@@ -164,6 +166,7 @@ public class login extends JFrame implements ItemListener{
                             logIn = true;
                             // GUI gu = new GUI();
                             GUI.logInAfterAdmin(key, "User");
+                            SortedGUI.logInAfterAdmin(key, "User");
                         } else {
                             // System.out.println("Expecting: "+b8.getText()+"
                             // Got: "+value);

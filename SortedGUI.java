@@ -54,7 +54,7 @@ public class SortedGUI {
         b.setBounds(100, 45, 100, 50);
         ;
         a.add(b);
-        a.setSize(600, 600);
+
         a.setLayout(null);
         a.setVisible(true);
 
@@ -65,7 +65,7 @@ public class SortedGUI {
         c.setBounds(100, 150, 100, 50);
         a.add(c);
         login.clickClear(b2);
-        a.setSize(1920, 1080);
+
         a.setLayout(null);
         a.setVisible(true);
 
@@ -136,14 +136,15 @@ public class SortedGUI {
             }
 
         });
-        // needs when clicked and to go to page with apps / app info etc
-        // apps / app info loads from csv file
 
         // Generate Filter Menu Bar
         filterDriver filterDriver = new filterDriver();
         a.setJMenuBar(filterDriver.getJMenuBar());
+        
+        a.setTitle("MetaApp");
         a.setVisible(true);
         a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        a.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
 
@@ -151,7 +152,7 @@ public class SortedGUI {
     private static void generateApps(String appName, List<App> appsList) {
         int x = 450;
         int y = 1;
-        int width = 250;
+        int width = 230;
         int height = 150;                      
         
         // LOCAL FILE PATH
@@ -160,7 +161,7 @@ public class SortedGUI {
         JButton app = new JButton(ico);
 
         app.setText(appName);
-        app.setBounds(x + ((totalApps%4)*275), y+ ((totalApps/4)%4*175), width, height);
+        app.setBounds(x + ((totalApps%4)*230), y+ ((totalApps/4)%4*175), width, height);
         a.add(app);
 
         app.addActionListener((ActionListener) new ActionListener() {
@@ -182,65 +183,108 @@ public class SortedGUI {
         });
         ++totalApps;
     }
-
-    @SuppressWarnings("unused")
-	private static void removeApps(String appName, List<App> appsList) {
-//int row = totalApps % 3;
-//int col = totalApps % 3;
-    }
-
+    
     /**
      * Method after logged in to create a user home page.
      * 
      * @param name
      */
-    public static void logInAfter(String name) {
+    public static void logInAfter(String name,  String userType) {
         logIn.setVisible(false);
         JLabel n = new JLabel("Hello, " + name);
         n.setBounds(270, 20, 150, 30);
         a.add(n);
 
-        JTextField bx = new JTextField("Enter a request...");
-        bx.setBackground(Color.white);
-        bx.setForeground(Color.black);
-        a.add(bx);
-        bx.setBounds(50, 300, 200, 30);
-
-        JButton send = new JButton("Send");
-
+        JButton send = new JButton("All Requests");
         a.add(send);
-        send.setBounds(270, 400, 100, 30);
+        send.setBounds(100, 250, 100, 30);
+
+        send.addActionListener((ActionListener) new ActionListener() {
+
+        	@Override
+            public void actionPerformed(ActionEvent e) {              
+                admin.main(null);                
+            }
+
+        });
+
+        JButton comm = new JButton("Comment here!");
+        a.add(comm);
+        comm.setBounds(270, 250, 120, 30);
+        comm.addActionListener((ActionListener) new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String args[] = new String[2];
+                String temp;
+                if(name.contains(":"))
+                    temp = name.substring(name.indexOf(":")+2);
+                else
+                    temp = name.substring(name.indexOf(":")+1);
+                args[0] = temp;
+                args[1] = userType;
+                commentDriver.main(args);
+                
+            }
+
+        });
+        a.setVisible(false);
+        a.setVisible(true);
+
+    }
+    
+    /**
+     * GUI after logged in as an admin.
+     * @param name
+     * @param userType
+     */
+    public static void logInAfterAdmin(String name, String userType) {
+        logIn.setVisible(false);
+        JLabel n = new JLabel("Hello, " + name);
+        n.setBounds(270, 20, 150, 30);
+        a.add(n);      
+
+        JButton send = new JButton("All requests");
+        a.add(send);
+        send.setBounds(100, 250, 100, 30);
+        
+        JButton comm = new JButton("Comment here!");
+        a.add(comm);
+        comm.setBounds(270, 250, 120, 30);
 
         send.addActionListener((ActionListener) new ActionListener() {
 
             @Override
-            public void actionPerformed(ActionEvent e) {
-                FileWriter myObj;
-                try {
-                    myObj = new FileWriter(
-                            "src/accounts/AdminRequests.txt",
-                            true);
-                    PrintWriter pr = new PrintWriter(myObj);
-                    pr.write(bx.getText() + "\n");
-                    // HashMap<String, String> map = new HashMap<String,
-                    // String>();
-                    JOptionPane.showMessageDialog(null,
-                            "Successful addition to requests");
-                    myObj.close();
-
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
-                bx.setText("");
+            public void actionPerformed(ActionEvent e) {              
+                admin.main(null);                
             }
 
         });
+        
+        comm.addActionListener((ActionListener) new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String args[] = new String[2];
+                String temp;
+                if(name.contains(":"))
+                    temp = name.substring(name.indexOf(":")+2);
+                else
+                    temp = name.substring(name.indexOf(":")+1);
+                args[0] = temp;
+                args[1] = userType;
+                commentDriver.main(args);
+                
+            }
+
+        });
+        
 
         a.setVisible(false);
         a.setVisible(true);
 
     }
-
+    
     /**
      * Method to sort the apps alphabetically by names.
      * 

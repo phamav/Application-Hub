@@ -235,11 +235,11 @@ class JTableCreate {
         jButton.addActionListener((ActionListener) new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//                jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             }
         });
-        //jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+        jFrame.add(jButton);
+        jFrame.setVisible(true);
     }    
 
 }
