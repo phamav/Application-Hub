@@ -197,7 +197,7 @@ public class login extends JFrame implements ItemListener{
                     FileWriter myObj;
                     try {
                         myObj = new FileWriter(
-                                "src/accounts/Accounts.txt",
+                                "accounts/Accounts.txt",
                                 true);
                         PrintWriter pr = new PrintWriter(myObj);
                         HashMap<String, String> map = new HashMap<String, String>();
@@ -243,7 +243,7 @@ public class login extends JFrame implements ItemListener{
                     FileWriter myObj;
                     try {
                         myObj = new FileWriter(
-                                "src/accounts/Admin.txt",
+                                "accounts/Admin.txt",
                                 true);
                         PrintWriter pr = new PrintWriter(myObj);
                         HashMap<String, String> map = new HashMap<String, String>();
@@ -287,7 +287,7 @@ public class login extends JFrame implements ItemListener{
                     FileWriter myObj;
                     try {
                         myObj = new FileWriter(
-                                "src/accounts/Moderator.txt",
+                                "accounts/Moderator.txt",
                                 true);
                         PrintWriter pr = new PrintWriter(myObj);
                         HashMap<String, String> map = new HashMap<String, String>();
@@ -360,7 +360,7 @@ public class login extends JFrame implements ItemListener{
         HashMap<String, String> map = new HashMap<String, String>();
         try {
             Scanner sc = new Scanner(new File(
-                    "src/accounts/Accounts.txt"));
+                    "accounts/Accounts.txt"));
             while (sc.hasNext()) {
                 String line = sc.nextLine();
                 String[] attributes = line.split(",");
@@ -378,7 +378,7 @@ public class login extends JFrame implements ItemListener{
         HashMap<String, String> map = new HashMap<String, String>();
         try {
             Scanner sc = new Scanner(new File(
-                    "src/accounts/Admin.txt"));
+                    "accounts/Admin.txt"));
             while (sc.hasNext()) {
                 String line = sc.nextLine();
                 String[] attributes = line.split(",");
@@ -396,7 +396,7 @@ public class login extends JFrame implements ItemListener{
         HashMap<String, String> map = new HashMap<String, String>();
         try {
             Scanner sc = new Scanner(new File(
-                    "src/accounts/Moderator.txt"));
+                    "accounts/Moderator.txt"));
             while (sc.hasNext()) {
                 String line = sc.nextLine();
                 String[] attributes = line.split(",");

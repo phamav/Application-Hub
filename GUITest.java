@@ -43,7 +43,7 @@ class GUITest {
 	 */
 	@Test
 	void testReadAppsFromCSV() {
-        List<App> apps = GUI.readAppsFromCSV("src/Application Information - Sheet1 (1).csv");
+        List<App> apps = GUI.readAppsFromCSV("Application Information - Sheet1 (1).csv");
         String str = apps.get(0).getName();
         
         assertEquals("Youtube", str);

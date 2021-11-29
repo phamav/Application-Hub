@@ -59,7 +59,7 @@ public class SortedGUI {
         a.setVisible(true);
 
         // LOCAL FILE PATH
-        List<App> apps = readAppsFromCSV("src/Application Information - Sheet1 (1).csv");
+        List<App> apps = readAppsFromCSV("Application Information - Sheet1 (1).csv");
         
         JButton c = new JButton("UnSort");
         c.setBounds(100, 150, 100, 50);
@@ -105,7 +105,7 @@ public class SortedGUI {
                         App ans = null;
 
                         // Please don't change the file path into a local file path. Keep it like this.
-                        String filePath = "src/icons/"
+                        String filePath = "icons/"
                                 + myString + ".png";
                         Icon ico = new ImageIcon(filePath);
                         for (App a : apps) {
@@ -156,7 +156,7 @@ public class SortedGUI {
         int height = 150;                      
         
         // LOCAL FILE PATH
-        String filePath = "src/icons/"+appName+".png";
+        String filePath = "icons/"+appName+".png";
         Icon ico = new ImageIcon(filePath);               
         JButton app = new JButton(ico);
 

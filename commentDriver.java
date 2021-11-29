@@ -26,7 +26,7 @@ public class commentDriver extends JFrame implements ItemListener{
     	JFrame main = new JFrame("Comment Site");
     	
     	List<App> apps;
-    	apps = GUI.readAppsFromCSV("src/Application Information - Sheet1 (1).csv");
+    	apps = GUI.readAppsFromCSV("Application Information - Sheet1 (1).csv");
     	String[] appNames = GUI.sort(apps);
         
     	commentDriver s = new commentDriver();

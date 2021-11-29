@@ -16,7 +16,7 @@ public class filterDriver {
      * @return a JMenuBar.
      */
     public JMenuBar getJMenuBar() {
-        List<App> apps = GUI.readAppsFromCSV("src/Application Information - Sheet1 (1).csv");
+        List<App> apps = GUI.readAppsFromCSV("Application Information - Sheet1 (1).csv");
        
         JMenuBar jMenuBar = new JMenuBar();
         // Filter bar code
@@ -33,7 +33,7 @@ public class filterDriver {
                 JLabel[] arrJLabels = new JLabel[result.size()];
                 int i = 0;
                 for (App a : result) {
-                    String filePath = "src/icons/"+a.getName()+".png";
+                    String filePath = "icons/"+a.getName()+".png";
                     Icon ico = new ImageIcon(filePath);
                     JLabel aJLabel = new JLabel(a.getName(), ico, SwingConstants.LEFT);
                     arrJLabels[i] = aJLabel; 
@@ -52,7 +52,7 @@ public class filterDriver {
                 JLabel[] arrJLabels = new JLabel[result.size()];
                 int i = 0;
                 for (App a : result) {
-                    String filePath = "src/icons/"+a.getName()+".png";
+                    String filePath = "icons/"+a.getName()+".png";
                     Icon ico = new ImageIcon(filePath);
                     JLabel aJLabel = new JLabel(a.getName(), ico, SwingConstants.LEFT);
                     arrJLabels[i] = aJLabel; 
@@ -71,7 +71,7 @@ public class filterDriver {
                 JLabel[] arrJLabels = new JLabel[result.size()];
                 int i = 0;
                 for (App a : result) {
-                    String filePath = "src/icons/"+a.getName()+".png";
+                    String filePath = "icons/"+a.getName()+".png";
                     Icon ico = new ImageIcon(filePath);
                     JLabel aJLabel = new JLabel(a.getName(), ico, SwingConstants.LEFT);
                     arrJLabels[i] = aJLabel; 
@@ -90,7 +90,7 @@ public class filterDriver {
                 JLabel[] arrJLabels = new JLabel[result.size()];
                 int i = 0;
                 for (App a : result) {
-                    String filePath = "src/icons/"+a.getName()+".png";
+                    String filePath = "icons/"+a.getName()+".png";
                     Icon ico = new ImageIcon(filePath);
                     JLabel aJLabel = new JLabel(a.getName(), ico, SwingConstants.LEFT);
                     arrJLabels[i] = aJLabel; 
@@ -109,7 +109,7 @@ public class filterDriver {
                 JLabel[] arrJLabels = new JLabel[result.size()];
                 int i = 0;
                 for (App a : result) {
-                    String filePath = "src/icons/"+a.getName()+".png";
+                    String filePath = "icons/"+a.getName()+".png";
                     Icon ico = new ImageIcon(filePath);
                     JLabel aJLabel = new JLabel(a.getName(), ico, SwingConstants.LEFT);
                     arrJLabels[i] = aJLabel; 
@@ -136,7 +136,7 @@ public class filterDriver {
                 JLabel[] arrJLabels = new JLabel[result.size()];
                 int i = 0;
                 for (App a : result) {
-                    String filePath = "src/icons/"+a.getName()+".png";
+                    String filePath = "icons/"+a.getName()+".png";
                     Icon ico = new ImageIcon(filePath);
                     JLabel aJLabel = new JLabel(a.getName(), ico, SwingConstants.LEFT);
                     arrJLabels[i] = aJLabel; 
@@ -155,7 +155,7 @@ public class filterDriver {
                 JLabel[] arrJLabels = new JLabel[result.size()];
                 int i = 0;
                 for (App a : result) {
-                    String filePath = "src/icons/"+a.getName()+".png";
+                    String filePath = "icons/"+a.getName()+".png";
                     Icon ico = new ImageIcon(filePath);
                     JLabel aJLabel = new JLabel(a.getName(), ico, SwingConstants.LEFT);
                     arrJLabels[i] = aJLabel; 
@@ -179,7 +179,7 @@ public class filterDriver {
                 JLabel[] arrJLabels = new JLabel[result.size()];
                 int i = 0;
                 for (App a : result) {
-                    String filePath = "src/icons/"+a.getName()+".png";
+                    String filePath = "icons/"+a.getName()+".png";
                     Icon ico = new ImageIcon(filePath);
                     JLabel aJLabel = new JLabel(a.getName(), ico, SwingConstants.LEFT);
                     arrJLabels[i] = aJLabel; 
@@ -198,7 +198,7 @@ public class filterDriver {
                 JLabel[] arrJLabels = new JLabel[result.size()];
                 int i = 0;
                 for (App a : result) {
-                    String filePath = "src/icons/"+a.getName()+".png";
+                    String filePath = "icons/"+a.getName()+".png";
                     Icon ico = new ImageIcon(filePath);
                     JLabel aJLabel = new JLabel(a.getName(), ico, SwingConstants.LEFT);
                     arrJLabels[i] = aJLabel; 
@@ -217,7 +217,7 @@ public class filterDriver {
                 JLabel[] arrJLabels = new JLabel[result.size()];
                 int i = 0;
                 for (App a : result) {
-                    String filePath = "src/icons/"+a.getName()+".png";
+                    String filePath = "icons/"+a.getName()+".png";
                     Icon ico = new ImageIcon(filePath);
                     JLabel aJLabel = new JLabel(a.getName(), ico, SwingConstants.LEFT);
                     arrJLabels[i] = aJLabel; 
@@ -236,7 +236,7 @@ public class filterDriver {
                 JLabel[] arrJLabels = new JLabel[result.size()];
                 int i = 0;
                 for (App a : result) {
-                    String filePath = "src/icons/"+a.getName()+".png";
+                    String filePath = "icons/"+a.getName()+".png";
                     Icon ico = new ImageIcon(filePath);
                     JLabel aJLabel = new JLabel(a.getName(), ico, SwingConstants.LEFT);
                     arrJLabels[i] = aJLabel; 
